@@ -1,0 +1,36 @@
+app:
+  welcome: 'Bienvenue'
+  no_result: 'Aucun résultats trouvés'
+  actions:
+    title: 'Actions'
+    save: 'Enregistrer'
+    add: 'Ajouter'
+  crud:
+    list: 'Lister'
+    new: 'Ajouter'
+    back_to_list: 'Revenir à la liste'
+    edit: 'Modifier'
+    delete: 'Supprimer'
+    show: 'Voir'
+  entity: 'Entité'
+  dashboard:
+    title: 'Tableau de bord'
+  student:
+    title: 'Etudiant'
+    list_title: 'Liste des étudiants'
+    new_title: 'Ajouter un étudiant'
+    edit_title: 'Editer un étudiant'
+    label:
+      student_number: 'Numéro d''étudiant'
+      firstname: 'Prénom'
+      lastname: 'Nom'
+      departement: 'Département'
+  departement:
+    no_result: 'Aucun département ne correspond à votre recherche'
+    title: 'Département'
+    list_title: 'Liste des départements'
+    new_title: 'Ajouter un département'
+    edit_title: 'Editer un département'
+    label:
+      name: 'Nom'
+      capacity: 'Capacité'
