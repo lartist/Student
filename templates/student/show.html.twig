@@ -1,0 +1,35 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}{{ 'app.student.title'|trans }}{% endblock %}
+
+{% block content %}
+    <!-- Page Heading -->
+    <div class="d-sm-flex align-items-center justify-content-between mb-4">
+        <h1 class="h3 mb-0 text-gray-800">{{ 'app.student.title'|trans }} {{ student.firstname }} {{ student.lastname }}</h1>
+    </div>
+    <table class="table">
+        <tbody>
+        <tr>
+            <th>{{ 'app.student.label.student_number'|trans }}</th>
+            <td>{{ student.numEtud }}</td>
+        </tr>
+            <tr>
+                <th>{{ 'app.student.label.firstname'|trans }}</th>
+                <td>{{ student.firstname }}</td>
+            </tr>
+            <tr>
+                <th>{{ 'app.student.label.lastname'|trans }}</th>
+                <td>{{ student.lastname }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <div class="form-group">
+        <a class="btn btn-primary" href="{{ path('app.student_index') }}">{{ 'app.crud.back_to_list'|trans }}</a>
+    </div>
+    <div class="form-group">
+        <a class="btn btn-primary" href="{{ path('app.student_edit', {'id': student.id}) }}">{{ 'app.crud.edit'|trans }}</a>
+    </div>
+
+    {{ include('student/_delete_form.html.twig') }}
+{% endblock %}

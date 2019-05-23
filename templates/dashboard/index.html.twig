@@ -1,0 +1,60 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}{{ 'app.dashboard.title'|trans }}{% endblock %}
+
+{% block content %}
+
+<div class="example-wrapper">
+    <div class="d-sm-flex align-items-center justify-content-between mb-4">
+        <h1 class="h3 mb-0 text-gray-800">{{ 'app.dashboard.title'|trans }}</h1>
+    </div>
+
+    <div class="card shadow mb-4">
+        <div class="card-header py-3">
+            <h6 class="m-0 font-weight-bold text-primary">Objet</h6>
+        </div>
+        <div class="card-body">
+            <h2 class="text-center">Test technique</h2>
+            <ul class="list-unstyled">
+                <b>Requis:</b>
+                <li>Stack technique : PHP5/7, HTML5, Css3, Mysql, JavaScript, doctrine, git</li>
+                <li>Durée de test: 2H-3H</li>
+                <li>Internet/ documentation : Autorisé</li>
+            </ul>
+            <div><b>NB:</b> Il faut pousser votre travail sur votre GIT personnel et l'envoyer par mail sur recipient@host.extension</div>
+            <b>Niveau 1:</b>
+            <ol>
+                <li>Installer le framework Symfony (En utilisant Composer)</li>
+                <li>Créer une première classe Student (Entity) qui contient les champs (FirstName 25 caractère / LastName 25 caractère / NumEtud 10 chiffre)</li>
+                <li>Générer les formulaires pour cette classe</li>
+                <li>
+                    Créer les CRUD :
+                    <ul>
+                        <li>Lister tous les enregistrements (Formulaire d'affichages)</li>
+                        <li>Créer un enregistrement (Formulaire d'ajout)</li>
+                        <li>Modifier un enregistrement existant (Formulaire de modification)</li>
+                        <li>Supprimer un enregistrement existant (Bouton de suppression)</li>
+                    </ul>
+                </li>
+            </ol>
+            <b>Niveau: 2</b>
+            <ul>
+                <li>Intégrer Bootstrap à votre projet</li>
+                <li>Adapter Bootstrap à vos formulaires</li>
+            </ul>
+
+            <b>Niveau: 3</b>
+            <ol>
+                <li>Créer une deuxième classe Department (Entity) qui contient les champs (Name 25 caractère / Capacity 10 chiffre)</li>
+                <li>Créer la relation entre la classe Departement et Student (OneToMany)</li>
+            </ol>
+            <b>Niveau: 4</b>
+            <ol>
+                <li>Créer un ApiRest en utilisant FosRestBundle ou Api-Platform pour lister tous les étudiants inscrits dans un département</li>
+                <li>Créer un Api documentation</li>
+            </ol>
+        </div>
+    </div>
+
+</div>
+{% endblock %}

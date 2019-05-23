@@ -1,0 +1,30 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}{{ 'app.departement.title'|trans }}{% endblock %}
+
+{% block content %}
+    <h1>{{ 'app.departement.title'|trans }}</h1>
+
+    <table class="table">
+        <tbody>
+            <tr>
+                <th>{{ 'app.departement.label.name'|trans }}</th>
+                <td>{{ departement.name }}</td>
+            </tr>
+            <tr>
+                <th>{{ 'app.departement.label.capacity'|trans }}</th>
+                <td>{{ departement.capacity }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <div class="form-group">
+        <a class="btn btn-primary" href="{{ path('app.departement_index') }}">{{ 'app.crud.back_to_list'|trans }}</a>
+    </div>
+
+    <div class="form-group">
+        <a class="btn btn-primary" href="{{ path('app.departement_edit', {'id': departement.id}) }}">{{ 'app.crud.edit'|trans }}</a>
+    </div>
+
+    {{ include('departement/_delete_form.html.twig') }}
+{% endblock %}

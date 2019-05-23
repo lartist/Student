@@ -1,0 +1,18 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}{{ 'app.student.edit_title'|trans }}{% endblock %}
+
+{% block content %}
+    <!-- Page Heading -->
+    <div class="d-sm-flex align-items-center justify-content-between mb-4">
+        <h1 class="h3 mb-0 text-gray-800">{{ 'app.student.edit_title'|trans }}</h1>
+    </div>
+
+    {{ include('student/_form.html.twig', {'button_label':  'app.crud.edit'|trans }) }}
+
+    <div class="form-group">
+        <a class="btn btn-primary" href="{{ path('app.student_index') }}">{{ 'app.crud.back_to_list'|trans }}</a>
+    </div>
+
+    {{ include('student/_delete_form.html.twig') }}
+{% endblock %}

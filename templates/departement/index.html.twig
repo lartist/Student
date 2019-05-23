@@ -1,0 +1,38 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}{{ 'app.departement.list_title'|trans }}{% endblock %}
+
+{% block content %}
+
+    <div class="d-sm-flex align-items-center justify-content-between mb-4">
+        <h1 class="h3 mb-0 text-gray-800">{{ 'app.departement.list_title'|trans }}</h1>
+    </div>
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th>{{ 'app.departement.label.name'|trans }}</th>
+                <th>{{ 'app.departement.label.capacity'|trans }}</th>
+                <th>{{ 'app.actions.title'|trans }}</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for departement in departements %}
+            <tr>
+                <td>{{ departement.name }}</td>
+                <td>{{ departement.capacity }}</td>
+                <td>
+                    <a href="{{ path('app.departement_show', {'id': departement.id}) }}">{{ 'app.crud.show'|trans }}</a>
+                    <a href="{{ path('app.departement_edit', {'id': departement.id}) }}">{{ 'app.crud.edit'|trans }}</a>
+                </td>
+            </tr>
+        {% else %}
+            <tr>
+                <td colspan="4">{{ 'app.no_result'|trans }}</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <a class="btn btn-primary" href="{{ path('app.departement_new') }}">{{ 'app.crud.new'|trans }}</a>
+{% endblock %}

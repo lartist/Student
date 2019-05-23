@@ -1,0 +1,13 @@
+# Read the documentation: https://symfony.com/doc/master/bundles/FOSRestBundle/index.html
+fos_rest:
+    view:
+        formats: {json: true, xml: false, rss: false}
+        view_response_listener:  true
+    serializer:
+        serialize_null: true
+    format_listener:
+        rules:
+            - { path: ^/api , fallback_format: json, priorities: [ json ] }
+            - { path: ^/, priorities: [ html, json, xml ], fallback_format: ~, prefer_extension: true }
+    exception:
+        exception_controller: 'fos_rest.exception.controller:showAction'

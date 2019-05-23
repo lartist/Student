@@ -1,0 +1,13 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}{{ 'app.departement.new_title'|trans }}{% endblock %}
+
+{% block content %}
+    <div class="d-sm-flex align-items-center justify-content-between mb-4">
+        <h1 class="h3 mb-0 text-gray-800">{{ 'app.departement.new_title'|trans }}</h1>
+    </div>
+
+    {{ include('departement/_form.html.twig') }}
+
+    <a class="btn btn-primary" href="{{ path('app.departement_index') }}">{{ 'app.crud.back_to_list'|trans }}</a>
+{% endblock %}

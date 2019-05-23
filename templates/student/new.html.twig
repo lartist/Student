@@ -1,0 +1,14 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}{{ 'app.student.new_title'|trans }}{% endblock %}
+
+{% block content %}
+    <!-- Page Heading -->
+    <div class="d-sm-flex align-items-center justify-content-between mb-4">
+        <h1 class="h3 mb-0 text-gray-800">{{ 'app.student.new_title'|trans }}</h1>
+    </div>
+
+    {{ include('student/_form.html.twig') }}
+
+    <a class="btn btn-primary" href="{{ path('app.student_index') }}">{{ 'app.crud.back_to_list'|trans }}</a>
+{% endblock %}
